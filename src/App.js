@@ -1,12 +1,14 @@
-import './style/App.css';
+import './css/App.css';
 import { Routes, Route } from 'react-router-dom';
-import EmployeeList from './view/EmployeeList.jsx';
+import EmployeeList from './views/EmployeeList.jsx';
+import Welcome from './views/Welcome.jsx';
 
 function App() {
 	return (
 		<div className="App">
 			<Routes>
-				<Route path="/" element={<EmployeeList />} />
+				<Route path="/" element={<Welcome />} />
+				<Route path="/employe-list" element={<EmployeeList />} />
 			</Routes>
 		</div>
 	);

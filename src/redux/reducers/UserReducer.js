@@ -1,8 +1,15 @@
 export const INITIAL_STATE = {
-	showSignIn: true,
-	token: '',
 	firstName: '',
 	lastName: '',
+	dateOfBirth: 1,
+	dateStart: '',
+	address: {
+		street: '',
+		city: '',
+		state: '',
+		zipCode: '',
+	},
+	department: '',
 };
 
 export default function userReducer(state = INITIAL_STATE, action) {
@@ -22,12 +29,11 @@ export default function userReducer(state = INITIAL_STATE, action) {
 			};
 		}
 
-		case 'IS_LOGGED': {
+		case 'IS_BIRTHDAY': {
 			return {
 				...state,
 
-				showSignIn: false,
-				token: action.payload,
+				dateOfBirth: action.payload,
 			};
 		}
 		case 'IS_LOGOUT': {
