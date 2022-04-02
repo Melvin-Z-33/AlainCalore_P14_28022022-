@@ -1,27 +1,51 @@
 import React, { useState } from 'react';
 
-import DatePicker, { registerLocale } from 'react-datepicker';
-import fr from 'date-fns/locale/fr';
 import { useSelector, useDispatch } from 'react-redux';
-// import 'react-datepicker/dist/react-datepicker.css';
+import DatePicker, { registerLocale, setDefaultLocale, getDefaultLocale } from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
+import fr from 'date-fns/locale/fr';
+registerLocale('fr', fr);
 
-export default function Datepicker() {
-	registerLocale(('fr', fr));
-	const date = useSelector((state) => state.dateOfBirth);
+export default function Datepicker(props) {
 	const dispatch = useDispatch();
+	const [startDate, setStartDate] = useState(new Date());
 
-	const changeBirth = (date) => {
+	const saveBirthdayDate = (date) => {
+		setStartDate(date);
+
 		dispatch({
 			type: 'IS_BIRTHDAY',
-			payload: { dateOfBirth: date },
+			payload: {
+				dateOfBirth: date.toLocaleDateString(),
+			},
 		});
 	};
 
-	const [startDate, setStartDate] = useState(new Date());
+	const saveStartDate = (date) => {
+		setStartDate(date);
+
+		dispatch({
+			type: 'IS_STARTDATE',
+			payload: {
+				dateStart: date.toLocaleDateString(),
+			},
+		});
+	};
 	return (
 		<>
-			<DatePicker selected={startDate} onChange={(date) => changeBirth(date)} />
-			<div>{date}</div>
+			{props.category === 'startingday' ? (
+				<DatePicker
+					selected={startDate}
+					onChange={(date) => saveStartDate(date)}
+					locale="fr"
+				/>
+			) : (
+				<DatePicker
+					selected={startDate}
+					onChange={(date) => saveBirthdayDate(date)}
+					locale="fr"
+				/>
+			)}
 		</>
 	);
 }

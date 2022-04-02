@@ -1,7 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Datepicker from '../components/Datepicker/Datepicker';
-import 'react-datepicker/dist/react-datepicker.css';
 
 export default function EmployeeList() {
 	return (
@@ -12,7 +10,6 @@ export default function EmployeeList() {
 
 				<Link to="/"> Home </Link>
 			</div>
-			<Datepicker className="form-control" />
 		</>
 	);
 }

@@ -36,10 +36,18 @@ export default function userReducer(state = INITIAL_STATE, action) {
 				dateOfBirth: action.payload,
 			};
 		}
-		case 'IS_LOGOUT': {
+
+		case 'IS_STARTDATE': {
 			return {
 				...state,
-				showSignIn: true,
+
+				dateStart: action.payload,
+			};
+		}
+		case 'ADDDATA': {
+			return {
+				...state,
+				dataForm: action.payload,
 			};
 		}
 
