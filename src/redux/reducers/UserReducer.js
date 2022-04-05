@@ -1,7 +1,7 @@
 export const INITIAL_STATE = {
 	firstName: '',
 	lastName: '',
-	dateOfBirth: 1,
+	dateOfBirth: '',
 	dateStart: '',
 	address: {
 		street: '',

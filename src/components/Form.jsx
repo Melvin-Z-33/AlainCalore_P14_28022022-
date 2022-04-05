@@ -1,8 +1,12 @@
 import React from 'react';
 import Datepicker from '../components/Datepicker/Datepicker';
 import { useSelector, useDispatch } from 'react-redux';
+import DropdownSelect from './DropdownSelect/DropdownSelect';
+import listCity from '../listCity.js';
 
 export default function Form() {
+	console.log(listCity);
+
 	const saveEmploye = () => {
 		console.log('oki');
 	};
@@ -70,9 +74,9 @@ export default function Form() {
 
 					<label htmlFor="city">City</label>
 					<input id="city" type="text" />
-
 					<label htmlFor="state">State</label>
-					<select name="state" id="state"></select>
+					{/* <select name="state" id="state"></select> */}
+					<DropdownSelect list={listCity} id="state" />
 
 					<label htmlFor="zip-code">Zip Code</label>
 					<input id="zip-code" type="number" />

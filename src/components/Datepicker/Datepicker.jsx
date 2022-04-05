@@ -38,12 +38,14 @@ export default function Datepicker(props) {
 					selected={startDate}
 					onChange={(date) => saveStartDate(date)}
 					locale="fr"
+					dateFormat="dd/MM/yyyy"
 				/>
 			) : (
 				<DatePicker
 					selected={startDate}
 					onChange={(date) => saveBirthdayDate(date)}
 					locale="fr"
+					dateFormat="dd/MM/yyyy"
 				/>
 			)}
 		</>
