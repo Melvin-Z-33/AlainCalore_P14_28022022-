@@ -3,8 +3,11 @@ import { Link } from 'react-router-dom';
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
 import Select from 'react-dropdown-select';
+import { useSelector } from 'react-redux';
 
 export default function EmployeeList() {
+	const test = useSelector((state) => state.employees);
+	console.log(test);
 	return (
 		<>
 			<div id="employee-div" className="container">

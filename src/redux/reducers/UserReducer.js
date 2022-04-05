@@ -1,4 +1,4 @@
-export const INITIAL_STATE = [];
+export const INITIAL_STATE = { employees: [] };
 
 export default function userReducer(state = INITIAL_STATE, action) {
 	switch (action.type) {
@@ -34,8 +34,7 @@ export default function userReducer(state = INITIAL_STATE, action) {
 		}
 		case 'ADD_DATA': {
 			return {
-				...state,
-				user: action.payload,
+				employees: [...state.employees, action.payload],
 			};
 		}
 
