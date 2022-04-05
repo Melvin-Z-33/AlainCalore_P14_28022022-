@@ -38,6 +38,7 @@ export default function Datepicker(props) {
 					selected={startDate}
 					onChange={(date) => saveStartDate(date)}
 					locale="fr"
+					id="startingDay"
 					dateFormat="dd/MM/yyyy"
 				/>
 			) : (
@@ -45,6 +46,7 @@ export default function Datepicker(props) {
 					selected={startDate}
 					onChange={(date) => saveBirthdayDate(date)}
 					locale="fr"
+					id="birthDay"
 					dateFormat="dd/MM/yyyy"
 				/>
 			)}

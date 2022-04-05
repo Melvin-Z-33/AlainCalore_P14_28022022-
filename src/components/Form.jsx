@@ -5,62 +5,40 @@ import DropdownSelect from './DropdownSelect/DropdownSelect';
 import listCity from '../listCity.js';
 
 export default function Form() {
-	console.log(listCity);
-
-	const saveEmploye = () => {
-		console.log('oki');
-	};
 	const dispatch = useDispatch();
-
-	// const [dataForm, setDataForm] = {
-	// 	firstname: '',
-	// 	lastname: '',
-	// };
 
 	const handleForm = (e) => {
 		e.preventDefault();
-		// const newObjState = { ...dataForm };
 
-		// dispatch({
-		// 	type: 'ADDDATA',
-		// 	payload: newObjState,
-		// });
-	};
+		const user = {
+			firstname: document.getElementById('first-name').value,
+			lastname: document.getElementById('last-name').value,
+			dateBirth: document.getElementById('birthDay').value,
+			startingDay: document.getElementById('startingDay').value,
+			street: document.getElementById('street').value,
+			city: document.getElementById('city').value,
+			state: document.getElementsByClassName('Dropdown-placeholder')[0].innerHTML,
+			zipcode: document.getElementById('zip-code').value,
+			department: document.getElementById('department').value,
+		};
 
-	const handleInputs = (e) => {
-		// if (e.target.classList.contains('inp-firstname')) {
-		// 	const newObjState = { ...dataForm, firstame: e.target.value };
-		// 	setDataForm(newObjState);
-		// } else if (e.target.classList.contains('inp-lastname')) {
-		// 	const newObjState = { ...dataForm, lastname: e.target.value };
-		// 	setDataForm(newObjState);
-		// }
+		dispatch({
+			type: 'ADD_DATA',
+			payload: user,
+		});
 	};
 
 	return (
 		<>
 			<form action="#" id="create-employee">
 				<label htmlFor="first-name">First Name</label>
-				<input
-					type="text"
-					id="first-name"
-					onChange={handleInputs}
-					className="inp-firstname"
-				/>
+				<input type="text" id="first-name" className="inp-firstname" />
 
 				<label htmlFor="last-name">Last Name</label>
-				<input type="text" id="last-name" onChange={handleInputs} />
+				<input type="text" id="last-name" />
 
 				<label htmlFor="date-of-birth">Date of Birth</label>
 
-				{/* <input
-					type="text"
-					// name={this.props.name}
-					className="answer"
-					// value={this.props.value}
-					// onChange={this.props.handleChange}
-					id="date-of-birth"
-				/> */}
 				<Datepicker className="answer" id="date-of-birth" category="birthday" />
 
 				<label htmlFor="start-date">Start Date</label>
@@ -74,8 +52,8 @@ export default function Form() {
 
 					<label htmlFor="city">City</label>
 					<input id="city" type="text" />
+
 					<label htmlFor="state">State</label>
-					{/* <select name="state" id="state"></select> */}
 					<DropdownSelect list={listCity} id="state" />
 
 					<label htmlFor="zip-code">Zip Code</label>

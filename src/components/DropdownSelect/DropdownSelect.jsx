@@ -12,6 +12,8 @@ export default function DropdownSelect(props) {
 			// onChange={onSelect}
 			value={defaultOption}
 			placeholder={options[0]}
+			id="state"
+			className="stated"
 		/>
 	);
 }

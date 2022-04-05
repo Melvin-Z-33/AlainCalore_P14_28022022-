@@ -1,24 +1,12 @@
-export const INITIAL_STATE = {
-	firstName: '',
-	lastName: '',
-	dateOfBirth: '',
-	dateStart: '',
-	address: {
-		street: '',
-		city: '',
-		state: '',
-		zipCode: '',
-	},
-	department: '',
-};
+export const INITIAL_STATE = [];
 
 export default function userReducer(state = INITIAL_STATE, action) {
 	switch (action.type) {
-		case 'IS_LOGGED_USER': {
+		case 'SAVE_USER': {
 			return {
 				...state,
-				firstName: action.payload.firstName,
-				lastName: action.payload.lastName,
+
+				user: action.payload,
 			};
 		}
 		case 'UPDATE_NAME': {
@@ -44,10 +32,10 @@ export default function userReducer(state = INITIAL_STATE, action) {
 				dateStart: action.payload,
 			};
 		}
-		case 'ADDDATA': {
+		case 'ADD_DATA': {
 			return {
 				...state,
-				dataForm: action.payload,
+				user: action.payload,
 			};
 		}
 
