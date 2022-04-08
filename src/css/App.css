@@ -64,3 +64,42 @@ label {
 .address {
   margin-top: 10px;
 }
+
+.select-max-entry {
+  width: 200px;
+  position: absolute;
+  top: 86px;
+  z-index: 5;
+}
+
+.footer-flex {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+/*  title of column */
+.sc-evZas {
+  font-weight: bold;
+  font-size: 13px;
+}
+
+/* body of table */
+.fwKvpK {
+  width: 100%;
+  background-color: lightgray;
+  height: 10px;
+}
+
+.pagination {
+  width: 200px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.pagination button {
+
+  background-color: white;
+  border: none;
+
+}
