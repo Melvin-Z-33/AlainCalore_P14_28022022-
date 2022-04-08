@@ -80,9 +80,20 @@ export default function EmployeeList() {
 	// *filter
 	const [filterText, setFilterText] = React.useState('');
 	const [resetPaginationToggle, setResetPaginationToggle] = React.useState(false);
-	const filteredItems = data.filter(
-		(item) => item.firstname && item.firstname.toLowerCase().includes(filterText.toLowerCase()),
-	);
+	// const filteredItems = data.filter(
+	// 	(item) => item.lastname && item.firstname.toLowerCase().includes(filterText.toLowerCase()),
+	// );
+
+	const filteredItems = data.filter((item) => {
+		return (
+			item.firstname.toLowerCase().includes(filterText.toLowerCase()) ||
+			item.lastname.toLowerCase().includes(filterText.toLowerCase()) ||
+			item.department.toLowerCase().includes(filterText.toLowerCase()) ||
+			item.city.toLowerCase().includes(filterText.toLowerCase()) ||
+			item.state.toLowerCase().includes(filterText.toLowerCase()) ||
+			item.street.toLowerCase().includes(filterText.toLowerCase())
+		);
+	});
 
 	const subHeaderComponentMemo = React.useMemo(() => {
 		const handleClear = () => {
