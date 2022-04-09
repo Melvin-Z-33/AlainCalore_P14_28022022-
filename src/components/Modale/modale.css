@@ -1,0 +1,44 @@
+.button {
+
+    display: block;
+    margin: auto;
+
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.wrapper {
+    height: 45px;
+    width: 389px;
+    background: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 3%;
+}
+
+.wrapper p {
+    width: 100%;
+    position: absolute;
+
+}
+
+.close {
+    position: absolute;
+    right: -8px;
+    top: -8px;
+    border-radius: 50%;
+    border: none;
+    background-color: black;
+    color: white;
+    width: 30px;
+    height: 30px;
+}

@@ -17,9 +17,9 @@ export default function Welcome() {
 
 				{/* <button onclick="saveEmployee()">Save</button> */}
 			</div>
-			<div id="confirmation" className="modal">
+			{/* <div id="confirmation" className="modal">
 				Employee Created!
-			</div>
+			</div> */}
 		</>
 	);
 }
