@@ -30,7 +30,7 @@ export default function Counter(props) {
 		</div>
 	) : (
 		<div className="counter" id="counterCustom">
-			Showing 0 to {nbrForFilter.length} of {nbrForFilter.length} entries (filtred from{' '}
+			Showing 1 to {nbrForFilter.length} of {nbrForFilter.length} entries (filtred from{' '}
 			{resultLength.length} total entries)
 		</div>
 	);

@@ -106,9 +106,36 @@ label {
 
 /* pagination counter */
 .sc-bZkfAO {
+
   display: none;
 }
 
 .sc-llJcti {
+  /* display: none; */
+  /* color: 'red' */
+}
+
+/* .OHwJB {
   display: none;
+} */
+
+
+
+/* compoent select-max-entry */
+.select-max-entry {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.select-max-entry :nth-child(1) {
+  order: 1;
+}
+
+.select-max-entry :nth-child(2) {
+  order: 3;
+}
+
+.select-max-entry :nth-child(3) {
+  order: 2;
 }

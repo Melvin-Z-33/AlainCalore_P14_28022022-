@@ -109,12 +109,11 @@ export default function EmployeeList() {
 	// *filter
 
 	const paginationComponentOptions = {
-		noRowsPerPage: false,
 		rowsPerPageText: 'Show',
-		rangeSeparatorText: 'en',
+		rangeSeparatorText: 'un',
 		selectAllRowsItem: false,
-		// selectAllRowsItemText: 'Todos',
 	};
+	let c = [20, 50, 60];
 
 	return (
 		<>
@@ -126,13 +125,16 @@ export default function EmployeeList() {
 			<DataTable
 				columns={columns}
 				data={filteredItems}
-				pagination
+				pagination={true}
+				paginationPerPage={10}
 				paginationComponentOptions={paginationComponentOptions}
+				paginationTotalRows={0}
 				// paginationResetDefaultPage={resetPaginationToggle} // optionally, a hook to reset pagination to page 1
 				subHeader
 				subHeaderComponent={subHeaderComponentMemo}
 				persistTableHead
 				center={true}
+				paginationRowsPerPageOptions={[10, 25, 50, 100]}
 			/>
 			<div className="footer-flex">
 				<Counter resultLength={arrayOfEmployees} nbrForFilter={filteredItems} />
