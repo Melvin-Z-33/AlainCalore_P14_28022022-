@@ -2,6 +2,11 @@ import React from 'react';
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
 
+/**
+ * @return  Dropdown component
+ * @param {string} props - list to display
+ */
+
 export default function DropdownSelect(props) {
 	const defaultOption = '';
 	const options = props.list.map((el) => el.name);
@@ -9,7 +14,6 @@ export default function DropdownSelect(props) {
 	return (
 		<Dropdown
 			options={options}
-			// onChange={onSelect}
 			value={defaultOption}
 			placeholder={options[0]}
 			id="state"

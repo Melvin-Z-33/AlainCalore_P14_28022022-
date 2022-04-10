@@ -1,5 +1,5 @@
 import React from 'react';
-import Form from '../components/Form';
+import Form from '../components/Form/Form';
 import { Link } from 'react-router-dom';
 
 export default function Welcome() {

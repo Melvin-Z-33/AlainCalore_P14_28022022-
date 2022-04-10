@@ -1,19 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Dropdown from 'react-dropdown';
+// import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
-import Select from 'react-dropdown-select';
+// import Select from 'react-dropdown-select';
 import { useSelector } from 'react-redux';
 import DataTable from 'react-data-table-component';
-import styled from 'styled-components';
+
 import FilterComponent from '../components/Table/FilterComponent';
 import SelectMaxEntries from '../components/Table/SelectMaxEntries';
 import Pagination from '../components/Table/Pagination';
-import Counter from '../components/Table/Counter';
-
-const EmployeeTableWrapper = styled.div`
-	width: 80%;
-`;
+import Counter from '../components/Table/Counter/Counter';
 
 const columns = [
 	{
@@ -73,9 +69,8 @@ const columns = [
 ];
 
 export default function EmployeeList() {
-	const test = useSelector((state) => state.employees);
-	const data = test;
-	console.log(test);
+	const arrayOfEmployees = useSelector((state) => state.employees);
+	const dataForFilter = arrayOfEmployees;
 
 	// *filter
 	const [filterText, setFilterText] = React.useState('');
@@ -84,7 +79,7 @@ export default function EmployeeList() {
 	// 	(item) => item.lastname && item.firstname.toLowerCase().includes(filterText.toLowerCase()),
 	// );
 
-	const filteredItems = data.filter((item) => {
+	const filteredItems = dataForFilter.filter((item) => {
 		return (
 			item.firstname.toLowerCase().includes(filterText.toLowerCase()) ||
 			item.lastname.toLowerCase().includes(filterText.toLowerCase()) ||
@@ -114,10 +109,11 @@ export default function EmployeeList() {
 	// *filter
 
 	const paginationComponentOptions = {
+		noRowsPerPage: false,
 		rowsPerPageText: 'Show',
 		rangeSeparatorText: 'en',
-		selectAllRowsItem: true,
-		selectAllRowsItemText: 'Todos',
+		selectAllRowsItem: false,
+		// selectAllRowsItemText: 'Todos',
 	};
 
 	return (
@@ -139,8 +135,7 @@ export default function EmployeeList() {
 				center={true}
 			/>
 			<div className="footer-flex">
-				<Counter />
-				<Pagination />
+				<Counter resultLength={arrayOfEmployees} nbrForFilter={filteredItems} />
 			</div>
 			<Link to="/"> Home </Link>
 		</>
