@@ -14,12 +14,7 @@ export default function Welcome() {
 
 				<h2>Create Employee</h2>
 				<Form />
-
-				{/* <button onclick="saveEmployee()">Save</button> */}
 			</div>
-			{/* <div id="confirmation" className="modal">
-				Employee Created!
-			</div> */}
 		</>
 	);
 }

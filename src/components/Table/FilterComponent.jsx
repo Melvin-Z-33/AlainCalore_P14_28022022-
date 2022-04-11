@@ -11,24 +11,13 @@ const TextField = styled.input`
 	border-bottom-right-radius: 0;
 	border: 1px solid #e5e5e5;
 	padding: 0 32px 0 16px;
+	margin-left: 18px;
 
 	&:hover {
 		cursor: pointer;
 	}
 `;
 
-// const ClearButton = styled.button`
-// 	border-top-left-radius: 0;
-// 	border-bottom-left-radius: 0;
-// 	border-top-right-radius: 5px;
-// 	border-bottom-right-radius: 5px;
-// 	height: 34px;
-// 	width: 32px;
-// 	text-align: center;
-// 	display: flex;
-// 	align-items: center;
-// 	justify-content: center;
-// `;
 export default function FilterComponent({ filterText, onFilter, onClear }) {
 	return (
 		<>
@@ -40,9 +29,6 @@ export default function FilterComponent({ filterText, onFilter, onClear }) {
 				value={filterText}
 				onChange={onFilter}
 			/>
-			{/* <ClearButton type="button" onClick={onClear}>
-				X
-			</ClearButton> */}
 		</>
 	);
 }

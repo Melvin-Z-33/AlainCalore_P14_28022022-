@@ -1,15 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import Dropdown from 'react-dropdown';
-import 'react-dropdown/style.css';
-// import Select from 'react-dropdown-select';
 import { useSelector } from 'react-redux';
 import DataTable from 'react-data-table-component';
-
 import FilterComponent from '../components/Table/FilterComponent';
 import SelectMaxEntries from '../components/Table/SelectMaxEntries';
-import Pagination from '../components/Table/Pagination';
 import Counter from '../components/Table/Counter/Counter';
+import 'react-dropdown/style.css';
 
 const columns = [
 	{
@@ -72,12 +68,10 @@ export default function EmployeeList() {
 	const arrayOfEmployees = useSelector((state) => state.employees);
 	const dataForFilter = arrayOfEmployees;
 
-	// *filter
+	// * FILTER FOR SEARCH BAR COMPONENT *
+
 	const [filterText, setFilterText] = React.useState('');
 	const [resetPaginationToggle, setResetPaginationToggle] = React.useState(false);
-	// const filteredItems = data.filter(
-	// 	(item) => item.lastname && item.firstname.toLowerCase().includes(filterText.toLowerCase()),
-	// );
 
 	const filteredItems = dataForFilter.filter((item) => {
 		return (
@@ -106,14 +100,13 @@ export default function EmployeeList() {
 			/>
 		);
 	}, [filterText, resetPaginationToggle]);
-	// *filter
 
+	//  * OPTIONS FOR PAGINATION *
 	const paginationComponentOptions = {
 		rowsPerPageText: 'Show',
 		rangeSeparatorText: 'un',
 		selectAllRowsItem: false,
 	};
-	let c = [20, 50, 60];
 
 	return (
 		<>
@@ -129,7 +122,6 @@ export default function EmployeeList() {
 				paginationPerPage={10}
 				paginationComponentOptions={paginationComponentOptions}
 				paginationTotalRows={0}
-				// paginationResetDefaultPage={resetPaginationToggle} // optionally, a hook to reset pagination to page 1
 				subHeader
 				subHeaderComponent={subHeaderComponentMemo}
 				persistTableHead

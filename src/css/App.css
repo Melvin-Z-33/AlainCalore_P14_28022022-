@@ -40,7 +40,7 @@
 
 
 
-/** CSS **/
+/** CSS custom **/
 .title {
   display: flex;
   align-items: center;
@@ -55,6 +55,12 @@
   justify-content: center;
 }
 
+
+form {
+  margin-bottom: 10px;
+  ;
+}
+
 label {
   display: block;
   margin-top: 1rem;
@@ -65,18 +71,12 @@ label {
   margin-top: 10px;
 }
 
-.select-max-entry {
-  width: 200px;
-  position: absolute;
-  top: 86px;
-  z-index: 5;
-}
 
 .footer-flex {
   display: flex;
   justify-content: space-between;
-
 }
+
 
 /*  title of column */
 .sc-evZas {
@@ -89,6 +89,10 @@ label {
   width: 100%;
   background-color: lightgray;
   height: 10px;
+}
+
+.jVeafb {
+  background-color: #f9f9f9;
 }
 
 .pagination {
@@ -110,18 +114,16 @@ label {
   display: none;
 }
 
-.sc-llJcti {
-  /* display: none; */
-  /* color: 'red' */
+
+/* components select-max-entries */
+
+.select-max-entry {
+  width: 200px;
+  position: absolute;
+  top: 86px;
+  z-index: 5;
 }
 
-/* .OHwJB {
-  display: none;
-} */
-
-
-
-/* compoent select-max-entry */
 .select-max-entry {
   display: flex;
   align-items: center;
