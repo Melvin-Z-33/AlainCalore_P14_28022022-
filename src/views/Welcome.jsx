@@ -1,5 +1,5 @@
 import React from 'react';
-import Form from '../components/Form';
+import Form from '../components/Form/Form';
 import { Link } from 'react-router-dom';
 
 export default function Welcome() {
@@ -14,11 +14,6 @@ export default function Welcome() {
 
 				<h2>Create Employee</h2>
 				<Form />
-
-				{/* <button onclick="saveEmployee()">Save</button> */}
-			</div>
-			<div id="confirmation" className="modal">
-				Employee Created!
 			</div>
 		</>
 	);
