@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/AlainCalore_P14_28022022-%20/static/css/main.df41e055.css",
-    "main.js": "/AlainCalore_P14_28022022-%20/static/js/main.700dba42.js",
-    "static/js/787.a603b31f.chunk.js": "/AlainCalore_P14_28022022-%20/static/js/787.a603b31f.chunk.js",
-    "index.html": "/AlainCalore_P14_28022022-%20/index.html",
-    "main.df41e055.css.map": "/AlainCalore_P14_28022022-%20/static/css/main.df41e055.css.map",
-    "main.700dba42.js.map": "/AlainCalore_P14_28022022-%20/static/js/main.700dba42.js.map",
-    "787.a603b31f.chunk.js.map": "/AlainCalore_P14_28022022-%20/static/js/787.a603b31f.chunk.js.map"
+    "main.css": "/AlainCalore_P14_28022022-/static/css/main.df41e055.css",
+    "main.js": "/AlainCalore_P14_28022022-/static/js/main.e015c409.js",
+    "static/js/787.a603b31f.chunk.js": "/AlainCalore_P14_28022022-/static/js/787.a603b31f.chunk.js",
+    "index.html": "/AlainCalore_P14_28022022-/index.html",
+    "main.df41e055.css.map": "/AlainCalore_P14_28022022-/static/css/main.df41e055.css.map",
+    "main.e015c409.js.map": "/AlainCalore_P14_28022022-/static/js/main.e015c409.js.map",
+    "787.a603b31f.chunk.js.map": "/AlainCalore_P14_28022022-/static/js/787.a603b31f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.df41e055.css",
-    "static/js/main.700dba42.js"
+    "static/js/main.e015c409.js"
   ]
 }
