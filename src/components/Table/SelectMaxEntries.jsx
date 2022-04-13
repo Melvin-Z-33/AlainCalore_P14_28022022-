@@ -1,11 +1,10 @@
 import React from 'react';
-import styled from 'styled-components';
 
 export default function SelectMaxEntries() {
 	function moveCounter() {
 		let a = document.querySelector('.sc-llJcti');
 		let b = document.querySelector('#header-maxentry');
-		b.appendChild(a);
+		b.append(a);
 	}
 	setTimeout(moveCounter, 30);
 

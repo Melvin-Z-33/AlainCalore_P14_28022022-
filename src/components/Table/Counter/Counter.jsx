@@ -9,7 +9,7 @@ export default function Counter(props) {
 
 		let nav = document.querySelector('nav');
 
-		nav.appendChild(counter);
+		nav.append(counter);
 	}
 	setTimeout(moveCounter, 30);
 

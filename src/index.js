@@ -12,6 +12,7 @@ const { store, persistor } = configureStore();
 ReactDOM.render(
 	<Provider store={store}>
 		<PersistGate loading={null} persistor={persistor}>
+			{/* <Router basename={process.env.PUBLIC_URL}>  */}
 			<BrowserRouter>
 				<App />
 			</BrowserRouter>
