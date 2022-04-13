@@ -3,13 +3,12 @@ import './counter.css';
 
 export default function Counter(props) {
 	const { nbrForFilter, resultLength } = props;
+	let counter = document.getElementById('counterCustom');
+	let nav = document.querySelector('nav');
 
 	function moveCounter() {
-		let counter = document.getElementById('counterCustom');
-
-		let nav = document.querySelector('nav');
-
-		nav.append(counter);
+		console.log(counter);
+		nav.appendChild(counter);
 	}
 	setTimeout(moveCounter, 30);
 

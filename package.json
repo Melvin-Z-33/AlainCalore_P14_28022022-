@@ -10,6 +10,7 @@
 		"@testing-library/user-event": "^13.5.0",
 		"gh-pages": "^3.2.3",
 		"install": "^0.13.0",
+		"modal-23": "^1.1.8",
 		"modal-al1": "^1.0.0",
 		"modal-lino": "^1.0.3",
 		"react": "^17.0.2",

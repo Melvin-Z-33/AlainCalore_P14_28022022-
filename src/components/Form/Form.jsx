@@ -3,8 +3,7 @@ import Datepicker from '../Datepicker/Datepicker';
 import { useDispatch } from 'react-redux';
 import DropdownSelect from '../DropdownSelect/DropdownSelect';
 import listCity from '../../listCity.js';
-import Modale from '../Modale/Modale';
-import '../Modale/modale.css';
+import Modal from 'modal-23';
 
 export default function Form() {
 	const dispatch = useDispatch();
@@ -71,7 +70,12 @@ export default function Form() {
 					<option>Legal</option>
 				</select>
 			</form>
-			<Modale secondFunction={handleForm} buttonText="save" modalText="Employee Created!" />
+			<Modal
+				secondFunction={handleForm}
+				id="button-form"
+				buttonText="save"
+				modalText="Employee Created!"
+			/>
 		</>
 	);
 }
