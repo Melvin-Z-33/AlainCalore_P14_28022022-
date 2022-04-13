@@ -12,7 +12,7 @@ ReactDOM.render(
 	<Provider store={store}>
 		<PersistGate loading={null} persistor={persistor}>
 			{/* <Router basename={process.env.PUBLIC_URL}>  */}
-			<Router basename={process.env.PUBLIC_URL}>
+			<Router>
 				<App />
 			</Router>
 		</PersistGate>
