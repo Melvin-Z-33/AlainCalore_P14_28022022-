@@ -12,7 +12,7 @@ export default function Counter(props) {
 			nav.append(counter);
 		}
 	}
-	setTimeout(moveCounter, 100);
+	setTimeout(moveCounter, 10);
 
 	return nbrForFilter.length === resultLength.length ? (
 		<div className="counter" id="counterCustom">

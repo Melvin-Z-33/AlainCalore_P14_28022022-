@@ -6,18 +6,15 @@ export default function SelectMaxEntries() {
 	let numberOfEntries = document.querySelector('.sc-llJcti');
 	function moveCounter() {
 		let headerEntries = document.getElementById('header-maxentry');
-		let nav = document.querySelector('nav');
-		console.log(numberOfEntries);
+
 		if (numberOfEntries == null) {
 			setNbrEntries(false);
-			console.log('false');
 		} else {
 			setNbrEntries(true);
 			headerEntries.append(numberOfEntries);
-			console.log('true');
 		}
 	}
-	setTimeout(moveCounter, 100);
+	setTimeout(moveCounter, 10);
 
 	return (
 		<>
