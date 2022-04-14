@@ -1,28 +1,27 @@
 import React, { useState } from 'react';
 
 export default function SelectMaxEntries() {
-	const [nbrEntries, setNbrEntries] = useState(false);
+	const [nbrEntries, setNbrEntries] = useState();
 
-	let nav;
+	let numberOfEntries = document.querySelector('.sc-llJcti');
 	function moveCounter() {
-		let numberOfEntries = document.querySelector('.gnaqej');
 		let headerEntries = document.getElementById('header-maxentry');
-		nav = document.querySelector('nav');
-
-		if (nav === null) {
+		let nav = document.querySelector('nav');
+		console.log(numberOfEntries);
+		if (numberOfEntries == null) {
 			setNbrEntries(false);
-		}
-
-		if (nav !== null) {
+			console.log('false');
+		} else {
 			setNbrEntries(true);
 			headerEntries.append(numberOfEntries);
+			console.log('true');
 		}
 	}
 	setTimeout(moveCounter, 100);
 
 	return (
 		<>
-			{nbrEntries ? (
+			{numberOfEntries ? (
 				<div className="select-max-entry" id="header-maxentry">
 					<span>Show</span>
 					<span>entries</span>
@@ -30,7 +29,7 @@ export default function SelectMaxEntries() {
 			) : (
 				<>
 					<div className="select-max-entry" id="header-maxentry">
-						<span>Show</span>
+						<span>show</span>
 						<span>entries</span>
 						<select>
 							<option value={10} defaultValue>
