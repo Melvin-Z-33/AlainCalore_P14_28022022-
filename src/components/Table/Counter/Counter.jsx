@@ -3,14 +3,16 @@ import './counter.css';
 
 export default function Counter(props) {
 	const { nbrForFilter, resultLength } = props;
-	let counter = document.getElementById('counterCustom');
-	let nav = document.querySelector('nav');
 
 	function moveCounter() {
-		console.log(counter);
-		nav.appendChild(counter);
+		let counter = document.getElementById('counterCustom');
+		let nav = document.querySelector('nav');
+
+		if (nav !== null) {
+			nav.append(counter);
+		}
 	}
-	setTimeout(moveCounter, 30);
+	setTimeout(moveCounter, 100);
 
 	return nbrForFilter.length === resultLength.length ? (
 		<div className="counter" id="counterCustom">
